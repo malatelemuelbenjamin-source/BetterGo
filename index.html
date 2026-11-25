@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>BetterGo Marinduque | Public Information, Services and Transparency</title>
+    <meta
+      name="description"
+      content="Explore public information, government services, municipalities, development projects, announcements, and civic participation resources across Marinduque."
+    />
+    <meta name="theme-color" content="#08241a" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
+    <link rel="apple-touch-icon" href="/brand/icon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BetterGo Marinduque" />
+    <meta property="og:title" content="BetterGo Marinduque | Public Information, Services and Transparency" />
+    <meta
+      property="og:description"
+      content="An independent, community-driven digital initiative for public information, government services, and civic participation in Marinduque."
+    />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash of the wrong theme.
+      try {
+        var saved = localStorage.getItem('bg-theme')
+        var mode = saved || 'system'
+        var dark =
+          mode === 'dark' ||
+          (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        if (dark) document.documentElement.dataset.theme = 'dark'
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

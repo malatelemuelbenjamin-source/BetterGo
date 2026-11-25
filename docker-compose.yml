@@ -1,0 +1,18 @@
+services:
+  bettergo:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      API_PORT: 3001
+      DATABASE_PATH: /data/bettergo.db
+      UPLOADS_DIR: /data/uploads
+    volumes:
+      - bettergo-data:/data
+
+volumes:
+  bettergo-data:
